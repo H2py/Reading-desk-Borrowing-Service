@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_Do_List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ToDoList</h1>
+        <form action="" method="get" class="form-example" autocomplete="on" id="todoForm">
+            <div class="form-example">
+                <label for="task">오늘의 할 일을 입력해주세요! </label>
+                <input type="text" name="task" id="task" required />
+            </div>
+            <div class="form-example">
+                <input type="submit" value="만들기" />
+            </div>
+        </form>
+
+        <ul id="taskList"></ul>
+
+        <button id="clearAll">모두 지우기</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
