@@ -1,23 +1,8 @@
 {
-    "name": "your-project-name",
+    "name": "static-site",
     "version": "1.0.0",
-    "description": "A brief description of your project",
-    "main": "index.js",
     "scripts": {
-      "build": "your-build-command",
-      "start": "your-start-command",
-      "test": "your-test-command"
-    },
-    "dependencies": {
-      "some-dependency": "^1.0.0"
-    },
-    "devDependencies": {
-      "some-dev-dependency": "^1.0.0"
-    },
-    "engines": {
-      "node": ">=14.0.0"
-    },
-    "author": "Your Name",
-    "license": "MIT"
+      "build": "echo 'No build needed'"
+    }
   }
   
