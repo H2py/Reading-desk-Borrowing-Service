@@ -1,15 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter with Images</title>
-    <script src="counter.js"></script>
-
-
+    <title>당신의 독서대를 빌려보세요!</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
 </head>
 <body>
-    <h1>0</h1>
-    <button>Count</button>
+    <div class="welcome-container">
+        <div class="header">
+            <img src="./image/gorae.png" alt="Gorae Icon" class="icon">
+            <h1>독서대를 빌리러 온 걸 환영해!</h1>
+            <p>나는 목디스크가 있는데, 학교까지 독서대를 들고 다니기 번거롭더라고 <br>그래서 <b>독고래 앱</b>을 만들게 되었어 😌</p>
+        </div>
+        <div class="footer">
+            <button class="write-recommendation">1분만에 독서대 빌리기</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="./image/Dok1.jpg" alt="Heart Icon" class="icon">
+            <h2>독서대를 빌리기 위해서는<br><span style="color: #0046DC;">회원가입이 필요해!</span></h2>
+            <p>독서대를 이용하고 반납해야해서<br><b>빌리는 사람</b>의 정보를 받고 있어</p>
+            <button id="confirm-btn">회원가입 하기!</button>
+        </div>
+    </div>
+
+    <div class="verification-container" id="verification-container" style="display: none;">
+        <button class="back-btn" id="back-btn">←</button>
+        <h2>본인인증</h2>
+        <p>먼저 신원인증을 위해 너의 휴대폰 번호를 적어줘!</p>
+        <div class="input-group">
+            <label for="phone-number" class="phone-label">휴대폰 번호</label>
+            <input type="text" id="phone-number" maxlength="11" placeholder="010" />
+        </div>
+        <button id="get-code-btn" class="inactive">인증번호 받기</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="verfication.js"></script>
 </body>
 </html>

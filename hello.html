@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello</title>
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
+        
+        
+        var header = document.querySelector("header");
+        var section = document.querySelector("section");
+
+        var requestURL =
+          "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+
+        var request = new XMLHttpRequest();
+
+        request.open("GET", requestURL);
+        
+        document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('form').onsubmit = function() {
                 const name = document.querySelector('#name').value;
                 alert(`Hello, ${name}!`);
             };
-       });
+        });
     </script>
 </head>
 

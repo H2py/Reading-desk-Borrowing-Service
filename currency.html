@@ -6,15 +6,28 @@
     <title>Currency</title>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://api.exchangeratesapi.io/latest?base=USD')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
+
+            document.querySelector('form').onsubmit = function() {
+                fetch('https://api.exchangeratesapi.io/latest?base=USD')
+                .then(response => response.json())
+                .then(data => {
+                  const rate = data.rates.EUR;
+                document.querySelector('body').innerHTML = `1 USD is equal to ${rate} EUR.`;
             });
+
+            }
+            
         });
     </script>
 </head>
 <body>
-    
+    <form>
+        <input id="currency" placeholder="Currency" type="text">
+        <input type="submit" value="Convert">
+    </form>
+    <div id="result">
+
+
+    </div>
 </body>
 </html>
